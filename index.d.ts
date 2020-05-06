@@ -18,7 +18,7 @@ declare namespace WebSocketStream {
     on(event: string | symbol, listener: (this: WebSocket, ...args: any[]) => void): this;
   }
 
-  function createServer(opts?: WebSocket.ServerOptions, callback?: (stream?: WebSocketDuplex, request?: http.Request ) => any): Server;
+  function createServer(opts?: WebSocket.ServerOptions, callback?: (stream?: Duplex, request?: http.Request ) => any): Server;
 }
 
 declare function WebSocketStream(target: string | WebSocket, options?: WebSocket.ClientOptions): WebSocketStream.WebSocketDuplex;
